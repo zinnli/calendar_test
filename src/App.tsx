@@ -1,13 +1,21 @@
 import { ThemeProvider } from "@emotion/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { RecoilRoot } from "recoil";
 
-import { ReactIcon } from "assets";
-import { theme } from "styles/theme";
+import Router from "router/Router";
+import { theme } from "styles/themes/theme";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <ReactIcon />
-    </ThemeProvider>
+    <RecoilRoot>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <Router />
+        </ThemeProvider>
+      </QueryClientProvider>
+    </RecoilRoot>
   );
 }
 
