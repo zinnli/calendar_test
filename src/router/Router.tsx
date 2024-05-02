@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import * as P from "pages";
 
 export default function Router() {
@@ -7,7 +6,8 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route index element={<P.Landing />} />
-        <Route path="createLuckyDay" element={<P.CreateLuckyDay />} />
+        {/* <Route index element={<P.Error404Page />} /> */}
+        {/* <Route path="createLuckyDay" element={<P.CreateLuckyDay />} /> */}
       </Routes>
     </BrowserRouter>
   );
