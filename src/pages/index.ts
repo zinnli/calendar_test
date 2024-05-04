@@ -1,2 +1,3 @@
-export { default as Landing } from "./landing/Landing";
-export { default as Error404Page } from "./404/404";
+export { default as LandingPage } from "./landing/LandingPage";
+export { default as LuckyBoardPage } from "./luckyBoard/LuckyBoardPage";
+export { default as Error404Page } from "./404/Error404Page";
