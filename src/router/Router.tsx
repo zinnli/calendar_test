@@ -8,7 +8,7 @@ export default function Router() {
         <Route index element={<P.LandingPage />} />
         <Route path="luckyBoard" element={<P.LuckyBoardPage />} />
         <Route path="404" element={<P.Error404Page />} />
-        {/* <Route path="createLuckyDay" element={<P.CreateLuckyDay />} /> */}
+        <Route path="createLuckyDay" element={<P.CreateLuckyDayPage />} />
       </Routes>
     </BrowserRouter>
   );

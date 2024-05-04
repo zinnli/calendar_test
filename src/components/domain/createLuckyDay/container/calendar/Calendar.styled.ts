@@ -7,32 +7,39 @@ export const Calendar = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 360px;
-  width: 450px;
-  padding: 23px;
-  background-size: contain;
-  background: url("public/empty.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
 `;
 
 export const DayWeekWrapper = styled.div`
   position: relative;
+  bottom: -13px;
   display: flex;
   align-items: center;
-  width: 100%;
-  margin-bottom: 4px;
+  width: 295px;
+  z-index: 2;
+`;
+
+export const DayWeekBox = styled.div`
+  ${({ theme }) => css`
+    ${theme.fonts.headline1};
+    position: absolute;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  `}
 `;
 
 export const button = css`
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   border: 0;
-  background-color: transparent;
+  border-radius: 50%; //TODO: icon으로 변경 예정 -> 임의로 설정
+  background-color: #fff;
 
   & > svg {
     width: 24px;
@@ -53,13 +60,32 @@ export const NextArrowButton = styled.button`
 `;
 
 export const Month = styled.h3`
-  padding-left: 25px;
+  text-align: center;
+`;
+
+export const CalendarBox = styled.div`
+  position: relative;
+  width: 370px;
 `;
 
 export const CalendarHeader = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 22px;
   display: grid;
   grid-template-columns: repeat(7, 35px);
-  gap: 13px 7px;
+  gap: 7px 13px;
+  z-index: 1;
+`;
+
+export const DayWeek = styled.div`
+  ${({ theme }) => css`
+    ${theme.fonts.body1};
+  `}
+`;
+
+export const Img = styled.img`
+  width: 100%;
 `;
 
 export const DayButton = styled.button<{
