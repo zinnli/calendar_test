@@ -1,22 +1,16 @@
-import React from "react";
+import { Outlet, useLocation } from "react-router-dom";
 
 import { Header } from "./header";
-import { Footer } from "./footer";
 import * as S from "./Layout.styled";
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
+const Layout = () => {
+  const { pathname } = useLocation();
 
-const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
-      <S.Layout>
-        <Header />
-        {children}
-        <Footer />
-      </S.Layout>
-    </>
+    <S.Layout>
+      {pathname !== "/404" && <Header />}
+      <Outlet />
+    </S.Layout>
   );
 };
 
