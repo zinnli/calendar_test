@@ -17,6 +17,7 @@ import {
   GetLuckyDayCycleLastLuckyDaysQueryModel,
   GetLuckyDayCycleList,
   GetLuckyDayCycleQueryModel,
+  GetLuckyDayCycleLastLuckyDaysQueryModel,
 } from "types";
 
 export const useGetLuckyDaysActivities = () => {
