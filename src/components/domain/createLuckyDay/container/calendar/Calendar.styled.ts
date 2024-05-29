@@ -138,8 +138,12 @@ export const svgFrame = css`
 `;
 
 export const beigeIcon = (theme: Theme) => css`
-  ${svgFrame}
+  width: 300px;
   fill: ${theme.colors.beige};
+
+  svg {
+    width: 100%;
+  }
 `;
 
 export const largeBeigeIcon = (theme: Theme) => css`
