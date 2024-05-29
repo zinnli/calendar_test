@@ -78,7 +78,7 @@ export const CalendarBox = styled.div`
   top: -25px;
   left: 0;
 
-  @media (max-width: 380px) {
+  @media (max-width: 405px) {
     width: 330px;
   }
 `;
@@ -143,7 +143,7 @@ export const beigeIcon = (theme: Theme) => css`
 `;
 
 export const largeBeigeIcon = (theme: Theme) => css`
-  width: 100%;
+  width: 380px;
   fill: ${theme.colors.beige};
 
   svg {
