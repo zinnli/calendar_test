@@ -142,6 +142,16 @@ export const beigeIcon = (theme: Theme) => css`
   fill: ${theme.colors.beige};
 `;
 
+export const largeBeigeIcon = (theme: Theme) => css`
+  width: 100%;
+  fill: ${theme.colors.beige};
+
+  svg {
+    width: 100%;
+    height: 330px;
+  }
+`;
+
 export const lightbeigeIcon = (theme: Theme) => css`
   ${svgFrame}
   fill: ${theme.colors.lightBeige};
