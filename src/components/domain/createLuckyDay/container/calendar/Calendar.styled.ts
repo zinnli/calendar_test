@@ -3,6 +3,7 @@ import { Theme, css } from "@emotion/react";
 
 export const Calendar = styled.div`
   width: 100%;
+  height: 380px;
 `;
 
 export const DayWeekWrapper = styled.div`
