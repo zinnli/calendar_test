@@ -13,7 +13,7 @@ export const DayWeekWrapper = styled.div`
   width: 295px;
   z-index: 2;
 
-  @media (max-width: 380px) {
+  @media (max-width: 405px) {
     width: 250px;
   }
 `;
@@ -92,7 +92,7 @@ export const CalendarHeader = styled.div`
   gap: 7px 13px;
   z-index: 1;
 
-  @media (max-width: 380px) {
+  @media (max-width: 405px) {
     grid-template-columns: repeat(7, 27px);
   }
 `;
@@ -122,7 +122,7 @@ export const DayButton = styled.button<{
       ? theme.colors.lightBeige
       : isSelected && theme.colors.lightOrange};
 
-    @media (max-width: 380px) {
+    @media (max-width: 405px) {
       height: 27px;
     }
   `}
@@ -144,6 +144,10 @@ export const beigeIcon = (theme: Theme) => css`
   svg {
     width: 100%;
   }
+
+  @media (max-width: 405px) {
+    width: 250px;
+  }
 `;
 
 export const largeBeigeIcon = (theme: Theme) => css`
@@ -152,7 +156,10 @@ export const largeBeigeIcon = (theme: Theme) => css`
 
   svg {
     width: 100%;
-    height: 330px;
+  }
+
+  @media (max-width: 405px) {
+    width: 330px;
   }
 `;
 
