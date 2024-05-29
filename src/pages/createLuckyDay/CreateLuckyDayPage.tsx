@@ -77,15 +77,6 @@ function CreateLuckyDayPage() {
     );
   };
 
-  useEffect(() => {
-    const hasLuckyday = sessionStorage.getItem("hasLuckyday");
-
-    if (hasLuckyday === "1") {
-      navigate("/luckyboard");
-      return addToast({ content: "이미 생성된 럭키데이가 있어요." });
-    }
-  }, []);
-
   return (
     <ButtonLayout
       variant="hasIcon"
@@ -97,7 +88,7 @@ function CreateLuckyDayPage() {
     >
       <S.CreateLuckyDay>
         <ProgressBar progressState={currentProgress} />
-        {changePage(currentProgress)}
+        <SelectExceptDate setValue={setValue} watch={watch} />;
       </S.CreateLuckyDay>
     </ButtonLayout>
   );
