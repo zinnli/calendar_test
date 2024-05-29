@@ -7,6 +7,10 @@ export const Calendar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 405px) {
+    height: 330px;
+  }
 `;
 
 export const DayWeekWrapper = styled.div`
@@ -80,7 +84,7 @@ export const CalendarBox = styled.div`
   left: 0;
 
   @media (max-width: 405px) {
-    width: 330px;
+    width: 340px;
   }
 `;
 
@@ -160,7 +164,7 @@ export const largeBeigeIcon = (theme: Theme) => css`
   }
 
   @media (max-width: 405px) {
-    width: 330px;
+    width: 340px;
   }
 `;
 
