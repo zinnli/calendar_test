@@ -4,12 +4,13 @@ import { Theme, css } from "@emotion/react";
 export const Calendar = styled.div`
   width: 100%;
   height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const DayWeekWrapper = styled.div`
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   width: 295px;
   z-index: 2;
 
