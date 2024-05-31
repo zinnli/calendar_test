@@ -14,7 +14,7 @@ export const TextBox = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.black};
     ${theme.fonts.headline1};
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 10px 0px;
     text-align: center;
     white-space: pre-wrap;
   `}
@@ -22,7 +22,7 @@ export const TextBox = styled.div`
 
 export const LuckyMachine = styled.div`
   aspect-ratio: 430 / 625;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

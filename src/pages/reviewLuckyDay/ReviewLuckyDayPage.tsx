@@ -10,6 +10,7 @@ import {
   SvgButton,
 } from "components";
 import { ShortBoxIcon } from "assets";
+import { formatDate } from "utils";
 import { ax } from "apis/axios";
 import axios from "axios";
 
@@ -72,7 +73,6 @@ export default function ReviewLuckyDayPage() {
       }
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
-        console.error("Error response:", error.response);
         if (error.response.status === 2013) {
           addToast({ content: "이미지 또는 내용을 입력해 주세요." });
         } else {
@@ -83,7 +83,6 @@ export default function ReviewLuckyDayPage() {
           });
         }
       } else {
-        console.error("Error:", error);
         addToast({ content: "저장 중 오류가 발생했습니다" });
       }
     }
@@ -91,7 +90,7 @@ export default function ReviewLuckyDayPage() {
 
   useEffect(() => {
     if (data && data.resData && data.resData.review !== null) {
-      navigate(`/luckydays/review/${id}`);
+      navigate(`/luckydays/${id}`);
     }
   }, [data, id, navigate]);
 
@@ -100,17 +99,17 @@ export default function ReviewLuckyDayPage() {
   }
 
   if (error || !data) {
-    console.log("에러 발생:", error);
-    console.log("받은 데이터:", data);
     return <S.Container>오류가 발생했습니다.</S.Container>;
   }
+
+  const { dday, actNm } = data.resData;
 
   return (
     <SingleButtonLayout>
       <S.Container>
-        <S.TextBox>2023</S.TextBox>
+        <S.TextBox>{formatDate(dday, "YYYY-MM-DD")}</S.TextBox>
         <S.ReviewBox>
-          <S.TextBox>test</S.TextBox>
+          <S.TextBox>{actNm}</S.TextBox>
           <S.ImageUploadBox>
             <FileUploader onFileSelect={handleFileSelect} />
             {uploadedFile && (
@@ -118,11 +117,6 @@ export default function ReviewLuckyDayPage() {
                 <img
                   src={URL.createObjectURL(uploadedFile)}
                   alt="Uploaded preview"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "10px",
-                  }}
                 />
               </S.ImageBox>
             )}
