@@ -12,6 +12,7 @@ const globalStyle = css`
   }
 
   html {
+    min-height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     @supports (-webkit-touch-callout: none) {
       height: -webkit-fill-available;
