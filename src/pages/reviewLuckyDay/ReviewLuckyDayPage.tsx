@@ -122,8 +122,8 @@ export default function ReviewLuckyDayPage() {
                   src={URL.createObjectURL(uploadedFile)}
                   alt="Uploaded preview"
                   style={{
-                    width: "100%",
-                    height: "100%",
+                    width: "300px",
+                    height: "300px",
                     borderRadius: "10px",
                   }}
                 />
