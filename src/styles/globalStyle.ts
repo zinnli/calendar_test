@@ -12,7 +12,10 @@ const globalStyle = css`
   }
 
   html {
-    height: 100svh;
+    height: calc(var(--vh, 1vh) * 100);
+    @supports (-webkit-touch-callout: none) {
+      height: -webkit-fill-available;
+    }
     font-size: 62.5%; /* 1 rem = 10px */
     /* NOTE: 임의로 설정 추후 기본 폰트 확인 필요 */
     font-family: "omyu", "sans-serif";
