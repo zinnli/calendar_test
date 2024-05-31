@@ -19,7 +19,8 @@ export const LayoutContainer = styled.div`
 export const Layout = styled.div`
   max-width: 430px;
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
   background-size: cover;
   background-position: center;
   background-image: url("/images/background.webp");
