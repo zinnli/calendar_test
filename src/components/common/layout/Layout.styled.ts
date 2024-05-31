@@ -9,6 +9,10 @@ export const LayoutContainer = styled.div`
     width: 100%;
     height: calc(var(--vh, 1vh) * 100);
     background-color: ${theme.colors.background};
+
+    @supports (-webkit-touch-callout: none) {
+      height: -webkit-fill-available;
+    }
   `}
 `;
 

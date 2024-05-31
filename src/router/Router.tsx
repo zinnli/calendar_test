@@ -12,7 +12,9 @@ export default function Router({ children }: RouterProps) {
       {children}
       <Routes>
         <Route element={<Layout />}>
+          <Route path="/" element={<P.LandingPage />} />
           <Route path="create" element={<P.CreateLuckyDayPage />} />
+            <Route path="luckyboard" element={<P.LuckyBoardPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
