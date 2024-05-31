@@ -41,17 +41,19 @@ export default function LuckyBalls() {
           }
         );
 
+        const test = { dday: 1, dtlNo: 1 };
+
         const fetchedData: LuckyBallDetail[] = [];
-        if (response.data.resData && Array.isArray(response.data.resData)) {
-          response.data.resData.forEach((day) => {
+        if (test && Array.isArray(test)) {
+          test.forEach((day) => {
             let type: LuckyBallType;
-            if (1 === 0) {
+            if (day.dday === 0) {
               type = "LuckyBall_Dday";
-            } else if (1 === 1) {
+            } else if (day.dday === 1) {
               type = "LuckyBall_D1";
-            } else if (1 === 2) {
+            } else if (day.dday === 2) {
               type = "LuckyBall_D2";
-            } else if (1 === 3) {
+            } else if (day.dday === 3) {
               type = "LuckyBall_D3";
             } else {
               type = "LuckyBall_unknown";
