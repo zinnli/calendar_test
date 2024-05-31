@@ -2,6 +2,8 @@ import { Theme, css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const ButtonLayout = styled.div`
+  position: fixed;
+  top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
