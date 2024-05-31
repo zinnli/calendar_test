@@ -7,11 +7,11 @@ export const ButtonLayout = styled.div`
   justify-content: space-between;
   width: 100%;
   height: calc(var(--vh, 1vh) * 100 - 80px);
-  min-height: calc(100vh - 80px);
+  min-height: calc(100% - 80px);
 `;
 
 export const Body = styled.div`
-  overflow-y: auto;
+  overflow-y: hidden;
 `;
 
 export const ButtonWrapper = styled.div`
