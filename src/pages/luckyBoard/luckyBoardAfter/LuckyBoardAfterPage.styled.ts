@@ -23,7 +23,7 @@ export const TextBox = styled.div`
 export const LuckyMachine = styled.div`
   position: relative;
   max-width: 430px;
-  width: 90%;
+  width: 85%;
   display: flex;
   align-items: center;
   justify-content: center;
