@@ -6,8 +6,7 @@ export const Landing = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100 - 80px);
-  min-height: calc(100vh - 80px);
+  height: calc(var(--vh, 1vh) * 100 - 100px);
   z-index: 1;
 `;
 
