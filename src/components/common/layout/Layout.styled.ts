@@ -8,12 +8,12 @@ export const LayoutContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
     background-color: ${theme.colors.background};
 
     &::after {
       max-width: 430px;
       /* min-height: 100vh; */
-      height: calc(var(--vh, 1vh) * 100);
       background-size: cover;
       background-position: center;
       background-image: url("/images/background.webp");
