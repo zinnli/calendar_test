@@ -10,7 +10,6 @@ export const LayoutContainer = styled.div`
     width: 100%;
     height: calc(var(--svh, 1svh) * 100);
     background-color: ${theme.colors.background};
-    overflow: hidden;
 
     &::after {
       max-width: 430px;
