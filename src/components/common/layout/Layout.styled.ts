@@ -12,11 +12,6 @@ export const LayoutContainer = styled.div`
     background-color: ${theme.colors.background};
 
     &::after {
-      max-width: 430px;
-      /* min-height: 100vh; */
-      background-size: cover;
-      background-position: center;
-      background-image: url("/images/background.webp");
     }
   `}
 `;
@@ -25,6 +20,8 @@ export const Layout = styled.div`
   max-width: 430px;
   width: 100%;
   height: 100%;
+  /* min-height: 100vh; */
   background-size: cover;
   background-position: center;
+  background-image: url("/images/background.webp");
 `;

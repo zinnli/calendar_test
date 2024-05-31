@@ -8,8 +8,10 @@ const Layout = () => {
 
   return (
     <S.LayoutContainer>
-      {!(pathname === "/404" || pathname === "/loading") && <Header />}
-      <Outlet />
+      <S.Layout>
+        {!(pathname === "/404" || pathname === "/loading") && <Header />}
+        <Outlet />
+      </S.Layout>
     </S.LayoutContainer>
   );
 };
