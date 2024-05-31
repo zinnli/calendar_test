@@ -11,7 +11,7 @@ export const SingleButtonLayout = styled.div`
 `;
 
 export const Body = styled.div`
-  overflow-y: auto;
+  overflow-y: hidden;
 `;
 
 export const ButtonWrapper = styled.div`
