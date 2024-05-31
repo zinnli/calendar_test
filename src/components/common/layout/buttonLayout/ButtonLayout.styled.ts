@@ -10,7 +10,7 @@ export const ButtonLayout = styled.div`
 `;
 
 export const Body = styled.div`
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 `;
 
 export const ButtonWrapper = styled.div`
