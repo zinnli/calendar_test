@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   height: 80vh;
 `;
@@ -22,7 +22,7 @@ export const TextBox = styled.div`
 
 export const LuckyMachine = styled.div`
   aspect-ratio: 430 / 625;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
