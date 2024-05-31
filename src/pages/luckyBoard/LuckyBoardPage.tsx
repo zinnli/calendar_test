@@ -67,7 +67,7 @@ const LuckyBoardPage: React.FC = () => {
       handleClickFirstButton={handleOpenLastLuckyDayModal}
       handleClickSecondButton={handleOpenCheckLuckyDayModal}
     >
-      {data ? <LuckyBoardAfterPage /> : <LuckyBoardBeforePage data={data} />}
+      <LuckyBoardAfterPage />
     </ButtonLayout>
   );
 };

@@ -45,13 +45,13 @@ export default function LuckyBalls() {
         if (response.data.resData && Array.isArray(response.data.resData)) {
           response.data.resData.forEach((day) => {
             let type: LuckyBallType;
-            if (day.dday === 0) {
+            if (1 === 0) {
               type = "LuckyBall_Dday";
-            } else if (day.dday === 1) {
+            } else if (1 === 1) {
               type = "LuckyBall_D1";
-            } else if (day.dday === 2) {
+            } else if (1 === 2) {
               type = "LuckyBall_D2";
-            } else if (day.dday === 3) {
+            } else if (1 === 3) {
               type = "LuckyBall_D3";
             } else {
               type = "LuckyBall_unknown";
@@ -233,7 +233,17 @@ export default function LuckyBalls() {
               key={index}
               onClick={() => handleLuckyBallClick(ball)}
             >
-              {renderLuckyBall(ball, index)}
+              <CenteredSvgFrame
+                key={index}
+                label="D-day"
+                onClick={() => handleLuckyBallClick(ball)}
+              >
+                <SvgFrame
+                  key={index}
+                  css={S.LuckyBall_Dday}
+                  icon={<CircleBoxIcon />}
+                />
+              </CenteredSvgFrame>
             </CenteredSvgFrame>
           ))}
         </S.RowBox>
