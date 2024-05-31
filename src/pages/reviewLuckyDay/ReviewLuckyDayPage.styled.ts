@@ -16,8 +16,8 @@ export const ReviewBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 370px;
-  height: 390px;
+  width: 300px;
+  height: 320px;
   margin: 30px 20px 60px 20px;
   background-size: cover;
   background-repeat: no-repeat;

@@ -7,7 +7,7 @@ export const LayoutContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100 - 80px);
+    height: calc(var(--vh, 1vh) * 100);
     background-color: ${theme.colors.background};
 
     @supports (-webkit-touch-callout: none) {

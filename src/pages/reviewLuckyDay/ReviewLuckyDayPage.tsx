@@ -10,7 +10,6 @@ import {
   SvgButton,
 } from "components";
 import { ShortBoxIcon } from "assets";
-import { formatDate } from "utils";
 import { ax } from "apis/axios";
 import axios from "axios";
 
@@ -106,8 +105,6 @@ export default function ReviewLuckyDayPage() {
     return <S.Container>오류가 발생했습니다.</S.Container>;
   }
 
-  const { dday, actNm } = data.resData;
-
   return (
     <SingleButtonLayout>
       <S.Container>
@@ -122,8 +119,8 @@ export default function ReviewLuckyDayPage() {
                   src={URL.createObjectURL(uploadedFile)}
                   alt="Uploaded preview"
                   style={{
-                    width: "300px",
-                    height: "300px",
+                    width: "100%",
+                    height: "100%",
                     borderRadius: "10px",
                   }}
                 />
