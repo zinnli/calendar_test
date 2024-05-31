@@ -14,8 +14,8 @@ export const RowBox = styled.div`
 `;
 
 export const LuckyBallFace = styled.div<{ imageUrl: string }>`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 10px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,20 +23,20 @@ export const LuckyBallFace = styled.div<{ imageUrl: string }>`
   cursor: default;
 
   @media (max-width: 412px) {
-    width: 95px;
-    height: 95px;
+    width: 80px;
+    height: 80px;
     margin: 8px;
   }
 
   @media (max-width: 405px) {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     margin: 8px;
   }
 
   @media (max-width: 375px) {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     margin: 6px;
   }
 `;
