@@ -102,14 +102,14 @@ export default function ReviewLuckyDayPage() {
     return <S.Container>오류가 발생했습니다.</S.Container>;
   }
 
-  const { dday, actNm } = data.resData;
+  // const { dday, actNm } = data.resData;
 
   return (
     <SingleButtonLayout>
       <S.Container>
-        <S.TextBox>{formatDate(dday, "YYYY-MM-DD")}</S.TextBox>
+        <S.TextBox>11</S.TextBox>
         <S.ReviewBox>
-          <S.TextBox>{actNm}</S.TextBox>
+          <S.TextBox>1</S.TextBox>
           <S.ImageUploadBox>
             <FileUploader onFileSelect={handleFileSelect} />
             {uploadedFile && (

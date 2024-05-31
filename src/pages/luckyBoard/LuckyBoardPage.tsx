@@ -32,19 +32,7 @@ const LuckyBoardPage: React.FC = () => {
     .join("")
     ?.replace(/,/g, "");
 
-  const cycleInfo = (
-    <p>
-      생성 옵션:
-      <br />
-      {info ? formatDate(info.startDt, "YYYY-MM-DD") : "-"} ~{" "}
-      {info ? formatDate(info.endDt, "YYYY-MM-DD") : "-"}
-      <br />
-      <strong>{info?.period}</strong>일 동안 <strong>{info?.cnt}</strong>개의
-      럭키 데이
-      <br />
-      {expDatesString ? `\n제외 날짜:\n${expDatesString}` : ""}
-    </p>
-  );
+  const cycleInfo = <p>생성 옵션: ㅇㅇ</p>;
 
   const handleOpenLastLuckyDayModal = () => {
     if (!lastLuckyDays && !data?.[0].cyclNo) {
@@ -64,8 +52,8 @@ const LuckyBoardPage: React.FC = () => {
   };
 
   const handleOpenCheckLuckyDayModal = () => {
-    if (!info)
-      return addToast({ content: "진행 중인 럭키 데이 정보가 없어요." });
+    // if (!info)
+    //   return addToast({ content: "진행 중인 럭키 데이 정보가 없어요." });
 
     handleOpenModal(<ArchiveModal css={S.archiveModal} moreInfo={cycleInfo} />);
   };
