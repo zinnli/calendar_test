@@ -4,7 +4,7 @@ export const archiveModal = (theme: Theme) => css`
   div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
     strong {
