@@ -6,10 +6,11 @@ export const SingleButtonLayout = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: calc(100% - 80px);
-  overflow: scroll;
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+  overflow-y: scroll;
+`;
 
 export const ButtonWrapper = styled.div`
   display: flex;

@@ -5,7 +5,7 @@ export const ButtonLayout = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(var(--vh, 1vh) * 100 - 80px);
+  height: calc(100% - 80px);
 
   @supports (-webkit-touch-callout: none) {
     height: -webkit-fill-available;
@@ -13,7 +13,7 @@ export const ButtonLayout = styled.div`
 `;
 
 export const Body = styled.div`
-  overflow: auto; //NOTE: 스크롤 기능/디자인 확인 필요
+  overflow-y: scroll;
 `;
 
 export const ButtonWrapper = styled.div`
