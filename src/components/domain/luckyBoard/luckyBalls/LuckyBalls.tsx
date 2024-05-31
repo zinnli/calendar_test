@@ -31,58 +31,58 @@ export default function LuckyBalls() {
   const navigate = useNavigate();
   const { addToast } = useToast();
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await ax.get<GetLuckyDayApiResponse>(
-  //         "/luckydays/cycl/1",
-  //         {
-  //           params: { isCurrent: 1 },
-  //         }
-  //       );
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await ax.get<GetLuckyDayApiResponse>(
+          "/luckydays/cycl/1",
+          {
+            params: { isCurrent: 1 },
+          }
+        );
 
-  //       const fetchedData: LuckyBallDetail[] = [];
-  //       if (response.data.resData && Array.isArray(response.data.resData)) {
-  //         response.data.resData.forEach((day) => {
-  //           let type: LuckyBallType;
-  //           if (1 === 0) {
-  //             type = "LuckyBall_Dday";
-  //           } else if (1 === 1) {
-  //             type = "LuckyBall_D1";
-  //           } else if (1 === 2) {
-  //             type = "LuckyBall_D2";
-  //           } else if (1 === 3) {
-  //             type = "LuckyBall_D3";
-  //           } else {
-  //             type = "LuckyBall_unknown";
-  //           }
-  //           fetchedData.push({ type, dtlNo: day.dtlNo });
-  //         });
-  //       }
+        const fetchedData: LuckyBallDetail[] = [];
+        if (response.data.resData && Array.isArray(response.data.resData)) {
+          response.data.resData.forEach((day) => {
+            let type: LuckyBallType;
+            if (1 === 0) {
+              type = "LuckyBall_Dday";
+            } else if (1 === 1) {
+              type = "LuckyBall_D1";
+            } else if (1 === 2) {
+              type = "LuckyBall_D2";
+            } else if (1 === 3) {
+              type = "LuckyBall_D3";
+            } else {
+              type = "LuckyBall_unknown";
+            }
+            fetchedData.push({ type, dtlNo: day.dtlNo });
+          });
+        }
 
-  //       while (fetchedData.length < MAX_LUCKY_BALLS) {
-  //         fetchedData.push({ type: "LuckyBallFace" });
-  //       }
+        while (fetchedData.length < MAX_LUCKY_BALLS) {
+          fetchedData.push({ type: "LuckyBallFace" });
+        }
 
-  //       const shuffledData = fetchedData.sort(() => Math.random() - 0.5);
+        const shuffledData = fetchedData.sort(() => Math.random() - 0.5);
 
-  //       setLuckyBallData({
-  //         row1: shuffledData.slice(0, 2),
-  //         row2: shuffledData.slice(2, 5),
-  //         row3: shuffledData.slice(5, 7),
-  //       });
+        setLuckyBallData({
+          row1: shuffledData.slice(0, 2),
+          row2: shuffledData.slice(2, 5),
+          row3: shuffledData.slice(5, 7),
+        });
 
-  //       const faceImages = shuffledData
-  //         .filter((ball) => ball.type === "LuckyBallFace")
-  //         .map((_, index) => `/images/face-0${index + 1}.webp`);
-  //       setLuckyBallFaceImages(faceImages);
-  //     } catch (error) {
-  //       addToast({ content: "오류가 발생했습니다." });
-  //     }
-  //   };
+        const faceImages = shuffledData
+          .filter((ball) => ball.type === "LuckyBallFace")
+          .map((_, index) => `/images/face-0${index + 1}.webp`);
+        setLuckyBallFaceImages(faceImages);
+      } catch (error) {
+        addToast({ content: "오류가 발생했습니다." });
+      }
+    };
 
-  //   fetchData();
-  // }, []);
+    fetchData();
+  }, []);
 
   const renderLuckyBall = (ball: LuckyBallDetail, index: number) => {
     if (ball.type === "LuckyBallFace") {
