@@ -11,10 +11,6 @@ export const ButtonLayout = styled.div`
 
 export const Body = styled.div`
   overflow-y: scroll;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 `;
 
 export const ButtonWrapper = styled.div`
