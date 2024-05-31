@@ -111,9 +111,9 @@ export default function ReviewLuckyDayPage() {
   return (
     <SingleButtonLayout>
       <S.Container>
-        <S.TextBox>{formatDate(dday, "YYYY-MM-DD")}</S.TextBox>
+        <S.TextBox>2023</S.TextBox>
         <S.ReviewBox>
-          <S.TextBox>{actNm}</S.TextBox>
+          <S.TextBox>test</S.TextBox>
           <S.ImageUploadBox>
             <FileUploader onFileSelect={handleFileSelect} />
             {uploadedFile && (

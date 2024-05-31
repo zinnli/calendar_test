@@ -14,7 +14,8 @@ export default function Router({ children }: RouterProps) {
         <Route element={<Layout />}>
           <Route path="/" element={<P.LandingPage />} />
           <Route path="create" element={<P.CreateLuckyDayPage />} />
-            <Route path="luckyboard" element={<P.LuckyBoardPage />} />
+          <Route path="luckyboard" element={<P.LuckyBoardPage />} />
+          <Route path="review" element={<P.ReviewLuckyDayPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
