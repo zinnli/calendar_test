@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   height: 80vh;
 `;
@@ -23,7 +23,7 @@ export const TextBox = styled.div`
 export const LuckyMachine = styled.div`
   position: relative;
   max-width: 430px;
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
