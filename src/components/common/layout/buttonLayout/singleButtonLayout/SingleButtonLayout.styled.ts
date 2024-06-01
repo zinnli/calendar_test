@@ -7,7 +7,6 @@ export const SingleButtonLayout = styled.div`
   justify-content: space-between;
   width: 100%;
   height: calc(var(--vh, 1vh) * 100 - 80px);
-  min-height: calc(100% - 80px);
 `;
 
 export const Body = styled.div`
